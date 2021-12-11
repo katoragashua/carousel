@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 18px;
+    margin: 0;
+    font-family: 'ubuntu', calibri, sans-serif;
+    font-weight: lighter;
+}
+
+.container {
+    display: grid;
+    max-width: 80%;
+    padding: 2em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel {
+    width: 100%;
+    padding:  1em;
+    margin: 0 auto;
+    border: olive solid 1px;
+    height: 500px;
+    position: relative;
+}
+
+.dots {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: grey;
+}
+
+.current-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: darkslategray;
+}
+
+.carousel-images,
+.hidden
+ {
+    display: none;
+}
+
+.current-carousel {
+    display: block;
+    animation-name: fadeVisibility;
+    animation-duration: 1s;
+}
+
+.dotContainer {
+    display: flex;
+    gap: .3rem;
+    justify-content: center;
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0; 
+    }
+    
+    100% {
+        opacity: 1;    
+    }
+}
+
